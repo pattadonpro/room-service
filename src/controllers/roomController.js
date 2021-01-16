@@ -34,7 +34,7 @@ const methods = {
 
     async findRoomById(req, res, next) {
         try {
-            const room = await Room.findById(req.param.id);
+            const room = await Room.findById(req.params.id);
             if (!room) {
             throw createError(404, 'room not found');
             }
